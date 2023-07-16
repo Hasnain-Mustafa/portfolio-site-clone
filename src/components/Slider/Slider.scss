@@ -1,0 +1,96 @@
+@import '../../reusables.scss';
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7rem;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding-bottom: 10rem;
+
+  .img-container {
+    position: relative;
+    img {
+      position: relative;
+      z-index: 4;
+      height: 400px;
+      width: 350px;
+      border-radius: 40px;
+    }
+    .card {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      height: 400px;
+      width: 350px;
+      background-color: $project-behind-card;
+      border-radius: 40px;
+      transform: rotate(-10deg);
+    }
+  }
+
+  .slider-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .quotes {
+      font-size: 7rem;
+      font-weight: 600;
+      margin-bottom: -2rem;
+      color: $headlines;
+    }
+
+    .testimonial-text {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .author {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: $headlines;
+    }
+    .designation {
+      font-size: 1rem;
+    }
+  }
+}
+
+//  Media Queries  //
+
+//Tablet 768px
+
+@media (max-width: 768px) {
+  .slider-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 319px) and (max-width: 426px) {
+  .slider-container {
+    .img-container {
+      img {
+        height: 300px;
+        width: 250px;
+      }
+
+      .card {
+        height: 300px;
+        width: 250px;
+      }
+    }
+
+    .slider-text-container {
+      .quotes {
+        font-size: 5rem;
+      }
+
+      .testimonial-text {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '../../reusables.scss';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+
+  .footer-logo {
+    img {
+      display: inline-block;
+    }
+  }
+
+  .footer-logos {
+    display: flex;
+    gap: 1rem;
+
+    .footer-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      width: 60px;
+      border-radius: 14px;
+      background-color: $rest-site-color;
+      color: $primary-button;
+      font-size: 1.5rem;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $primary-button;
+        color: $rest-site-color;
+      }
+    }
+  }
+}
+
+//  Media Queries  //
+
+//Tablet 768px
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+}
+
+@media (min-width: 319px) and (max-width: 426px) {
+  .footer {
+    .footer-logo + p {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+}

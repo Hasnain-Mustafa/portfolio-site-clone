@@ -1,0 +1,127 @@
+@import '../../reusables.scss';
+
+.skills-container {
+  margin-top: 30rem;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  .card-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    .left-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .right-cards {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      width: 320px;
+      height: 320px;
+      background-color: $header-color;
+      border-radius: 40px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      p {
+        text-align: center;
+      }
+
+      .green-ring-icon::before {
+        content: '';
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        width: 80px;
+        height: 80px;
+        border: 2px solid $card-ring-color;
+        border-radius: 50%;
+      }
+
+      .green-ring-icon {
+        display: inline-block;
+        position: relative;
+        font-size: 50px;
+      }
+    }
+  }
+  .skills-inner-container {
+    .headline {
+      color: $headlines;
+      margin-bottom: 10px;
+    }
+
+    .skills-text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .skills-heading {
+        font-size: 3rem;
+      }
+
+      .skills-heading + p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+//  Media Queries  //
+
+//Tablets
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding-top: 10rem;
+    flex-direction: column-reverse;
+    gap: 1rem;
+
+    .skills-inner-container {
+      .headline {
+        color: $headlines;
+        margin-bottom: 10px;
+      }
+
+      .skills-text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .skills-heading {
+          font-size: 2.5rem;
+          font-weight: 600;
+        }
+
+        .skills-heading + p {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+//Mobiles between 319px to 426px
+
+@media (min-width: 319px) and (max-width: 426px) {
+  .skills-container {
+    .card-container {
+      flex-direction: column;
+      .right-cards {
+        margin-top: 0;
+      }
+    }
+  }
+}

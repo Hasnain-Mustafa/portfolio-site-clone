@@ -1,0 +1,51 @@
+//{Home Page}//
+
+//Header Section
+$header-color: #25262a;
+$primary-button: #ffbf54;
+$secondary-button: #fecd1a;
+
+$gradient-one: linear-gradient(to right, $secondary-button, $primary-button);
+$gradient-two: linear-gradient(to right, $primary-button, $secondary-button);
+
+//Hero Section
+$font-montserrat: 'Montserrat';
+$headlines: #64f4ab;
+
+//-------------//
+$card-ring-color: #50c389;
+
+$rest-site-color: #2d2e32;
+
+$project-behind-card: #424347;
+
+$projects-btn: #e8e8e8;
+
+//Button Class//
+
+.contact-button {
+  display: inline-block;
+  height: 50px;
+  width: 180px;
+  font-size: 1.1rem;
+  color: #333;
+  background: $gradient-one;
+  border-radius: 0.6rem;
+  transition: all 1s;
+  padding: 0.9rem 0.4rem 0.5rem 2rem;
+
+  &:hover {
+    background: $gradient-two;
+  }
+}
+
+.rest-site-background {
+  background-color: $rest-site-color;
+  font-family: $font-montserrat;
+}
+
+.hidden {
+  display: none;
+}
+
+//----------------//
